@@ -3,8 +3,8 @@
 /* Colour palette
    #4984B8 (deep blue)
    #C0DEE5 (pale blue)
-   #84EAB3 (mint green)
-   #A8DCAB (soft green)
+   #FFFFFF (white)
+   #FFFFFF (white)
 */
 
 :root {
@@ -12,8 +12,8 @@
   --bg-alt: #071423;
   --accent-blue: #4984B8;
   --accent-blue-light: #C0DEE5;
-  --accent-mint: #84EAB3;
-  --accent-soft-green: #A8DCAB;
+  --accent-mint: #FFFFFF;
+  --accent-soft-green: #FFFFFF;
   --text-main: #F7FAFC;
   --text-muted: #C0DEE5;
 }
@@ -208,8 +208,8 @@ main {
 .btn {
   padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(132, 234, 179, 0.4);
-  background: radial-gradient(circle at top left, rgba(132, 234, 179, 0.20), rgba(2, 7, 20, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.20), rgba(2, 7, 20, 0.95));
   color: var(--accent-mint);
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -295,8 +295,8 @@ main {
 .about-photo {
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(132, 234, 179, 0.4);
-  background: radial-gradient(circle at top, rgba(168, 220, 171, 0.4), rgba(2, 7, 20, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.4), rgba(2, 7, 20, 0.95));
 }
 
 .about-photo img {
