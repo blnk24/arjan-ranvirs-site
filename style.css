@@ -753,3 +753,58 @@ button:focus-visible {
     padding: 22px 18px;
   }
 }
+
+
+/* Revision 3: minimal photographic homepage and centered wordmark */
+.site-nav { position:fixed; top:0; left:0; right:0; height:72px; display:flex; align-items:center; justify-content:flex-end; padding:0 5%; background:rgba(2,7,20,.86); z-index:1000; }
+.site-nav .nav-brand { position:absolute; left:50%; transform:translateX(-50%); text-decoration:none; white-space:nowrap; }
+.site-nav .nav-links { margin-left:auto; }
+.home-main { padding:72px 0 0; min-height:calc(100svh - 70px); display:flex; align-items:center; justify-content:center; }
+.home-photo { width:min(100%, 1500px); margin:auto; }
+.home-photo img { display:block; width:100%; height:auto; max-height:calc(100svh - 72px); object-fit:contain; }
+.simple-page { padding:clamp(120px,15vh,170px) 6% 100px; max-width:1120px; min-height:calc(100svh - 80px); margin:0 auto; }
+.simple-page h1 { font-size:clamp(1.6rem,3vw,2.4rem); font-weight:400; }
+.release-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:32px; margin-top:42px; }
+footer a { color:inherit; text-decoration:none; }
+@media(max-width:768px){.site-nav{justify-content:flex-end}.site-nav .nav-toggle{margin-left:auto}.site-nav .nav-links{top:64px}.home-photo img{max-height:none}.simple-page{padding-top:120px}}
+
+/* Revision 4: discography, Caslon-inspired release titles */
+.release-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,70px);max-width:900px;margin:45px auto 0;}
+.release {min-width:0;}
+.release-title,.music-bandcamp h2 {font-family:"Adobe Caslon Pro","Big Caslon","Libre Caslon Text",Caslon,Georgia,serif;letter-spacing:0;font-weight:400;text-transform:none;font-size:clamp(1.25rem,2.4vw,1.9rem);margin:0 0 12px;}
+.release-art {display:block;overflow:hidden;}
+.release-art img {width:100%;aspect-ratio:1;object-fit:cover;display:block;transition:opacity .2s ease;}
+.release-art:hover img,.release-art:focus-visible img {opacity:.82;}
+.music-bandcamp {max-width:900px;margin:clamp(60px,9vw,120px) auto 0;}
+.music-bandcamp h2 {margin-bottom:18px;}
+.shows-updates {max-width:1200px;margin:0 auto;}
+@media(max-width:600px){.release-grid{grid-template-columns:1fr;gap:36px}.music-bandcamp{margin-top:65px}}
+
+/* Revision 5: quiet, centered single-column discography */
+.music-page { max-width: 900px; }
+.music-page > h1 { text-align: center; font-weight: 400; }
+.music-page .release-grid { display: flex; flex-direction: column; align-items: center; gap: clamp(55px, 8vw, 105px); max-width: 520px; margin: 48px auto 0; }
+.music-page .release { width: 100%; text-align: center; }
+.music-page .release-title { font-family: "Libre Caslon Text", "Adobe Caslon Pro", "Big Caslon", Caslon, Georgia, serif; font-size: clamp(1.13rem, 2vw, 1.42rem); font-weight: 400; line-height: 1.5; letter-spacing: .005em; margin: 0 0 18px; color: #444; }
+.music-page .release-art { width: 100%; }
+.music-page .music-bandcamp { max-width: 520px; text-align: center; }
+.music-page .music-bandcamp h2 { font-weight: 400; font-size: 1.35rem; color: #444; }
+@media(max-width:600px) { .music-page .release-grid { max-width: min(100%, 440px); gap: 58px; } }
+
+/* Revision 7: active navigation and matching release wordmark */
+.site-nav .nav-links a[aria-current="page"] {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+.site-nav .nav-links a[aria-current="page"]::after { display: none; }
+.music-page .release-grid { margin-top: 0; }
+.music-page .release-title {
+  font-family: "ITC Benguiat Std", serif;
+  color: var(--accent-mint);
+  font-weight: 400;
+  letter-spacing: .045em;
+  text-transform: none;
+}
